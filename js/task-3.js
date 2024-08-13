@@ -41,7 +41,7 @@ console.log(
     },
   ])
 );
-// Beklenen sonuç:
+//
 // [
 //   {
 //     name: "Ross Vazquez",
