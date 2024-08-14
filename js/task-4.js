@@ -1,10 +1,11 @@
 const getTotalBalanceByGender = (users, gender) => {
   return users
-    .filter((user) => user.gender === gender)
-    .reduce((total, user) => total + user.balance, 0);
+    .filter((user) => user.gender === gender) // Cinsiyeti belirtilen kullanıcıları filtrele
+    .reduce((total, user) => total + user.balance, 0); // Filtrelenen kullanıcıların bakiyelerini topla
 };
 
-const allUsers = [
+// Test için verilen kod
+const userList = [
   {
     name: "Moore Hensley",
     gender: "male",
@@ -42,5 +43,5 @@ const allUsers = [
   },
 ];
 
-console.log(getTotalBalanceByGender(allUsers, "male")); // 12053
-console.log(getTotalBalanceByGender(allUsers, "female")); // 8863
+console.log(getTotalBalanceByGender(userList, "male")); // 12053
+console.log(getTotalBalanceByGender(userList, "female")); // 8863
